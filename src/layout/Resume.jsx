@@ -2,6 +2,7 @@ import { pdfjs, Document, Page } from 'react-pdf'
 import { useState } from 'react'
 import Stack from '@mui/material/Stack'
 import { useMediaQuery } from '@mui/material';
+import ResumePDF from '../assets/Resume.pdf'
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.js',
@@ -32,7 +33,7 @@ export default function Resume() {
                 '& .react-pdf__Page > div': { display: 'none' }
             }}
         >
-            <Document file="src/assets/Resume.pdf" onLoadSuccess={onDocumentLoadSuccess}>
+            <Document file={ResumePDF} onLoadSuccess={onDocumentLoadSuccess}>
                 <Page pageNumber={pageNumber} />
             </Document>
         </Stack>

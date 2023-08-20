@@ -80,15 +80,15 @@ const initialValues = {
 
 export default function Contact() {
     const theme = useTheme()
-    const isPhone = useMediaQuery('(max-width: 60em)')
+    const isPhone = useMediaQuery('(max-width: 50em)')
     const [showAlert, setShowAlert] = useState({
         open: false,
         severity: undefined,
         message: undefined
     })
     
+    
     const formRef = useRef('')
-        
     const sendEmail = async (values, onSubmitProps) => {
         const { message } = values
 
@@ -119,6 +119,7 @@ export default function Contact() {
             id="contact" 
             component="section"
             alignItems="center"
+            width="100%"
         >
             {showAlert.open &&
                 <Snackbar 
@@ -158,7 +159,7 @@ export default function Contact() {
                         borderRadius=".5rem"
                         alignItems="center"
                         padding="5rem"
-                        width="75%"
+                        width={ isPhone ? "100%" : "75rem"}
                         gap="2rem"
                         sx={{
                             '& textarea::placeholder': {
