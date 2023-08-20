@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Passion+One:wght@400;700&display=swap');
+
+:root,
+html,
+body,
+.app {
+    height: 100%;
+    width: 100%;
+}
+
+
+html {
+    font-size: 62.5%; 
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    
+    @media only screen and (max-width: 60em) {
+        font-size: 55%;
+    }
+    
+    /* Phone */
+    @media only screen and (max-width: 37.5em) {
+        font-size: 50%;
+    }
+}
+
+.app {
+    /* contribute to header height */
+    padding-top: 64px;
+}
+
+@keyframes spotlight {
+
+    0%,
+    20% {
+        opacity: 1;
+        letter-spacing: 2px;
+    }
+
+    80%,
+    100% {
+        opacity: 0;
+        letter-spacing: 25px;
+    }
+}
