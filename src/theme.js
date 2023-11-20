@@ -62,7 +62,72 @@ export const tokens = {
     }
 }
 
-export const theme = createTheme({
+const themeOne = {
+    palette: {
+        primary: { main: '#E1E4EA' },
+        secondary: { main: '#03B0F9' },
+        background: {
+            default: '#00030A',
+            paper: tokens.black[800]
+        }
+    },
+    typography: {
+        fontSize: 16,
+        fontFamily: ['Passion One', 'sans-serif'].join(','),
+        h1: {
+            fontSize: '6rem',
+            fontWeight: '800',
+            color: '#E1E4EA'
+        },
+        h2: { fontSize: '5rem', fontWeight: '600' },
+        h3: { fontSize: '4rem', fontWeight: '800', color: '#03B0F9' },
+        h4: {
+            fontSize: '2.8rem',
+            fontWeight: 600,
+            fontFamily: ['Passion One', 'sans-serif'].join(','),
+            color: '#03B0F9'
+        },
+        h5: {
+            fontSize: '2.5rem',
+            fontWeight: 500,
+            fontFamily: ['Passion One', 'sans-serif'].join(','),
+            color: '#03B0F9'
+        },
+        body1: {
+            fontSize: '3.5rem',
+            color: '#03B0F9',
+            fontWeight: 800
+        },
+        body2: {
+            fontSize: '1.7rem',
+            color: '#E1E4EA',
+            fontWeight: 500
+        },
+        button: {
+            fontSize: '2rem',
+            fontFamily: ['Passion One', 'sans-serif'].join(',')
+        }
+    },
+    breakpoints: {
+        values: {
+            xs: 0,
+            sm: 768,
+            md: 992,
+            lg: 1200,
+            xl: 1920
+        }
+    },
+    components: {
+        MuiTooltip: {
+            styleOverrides: {
+                tooltip: { backgroundColor: tokens.cool_gray[100] },
+                arrow: { color: tokens.cool_gray[100] }
+            }
+        }
+    }
+}
+
+const themeTwo = {
     palette: {
         primary: { main: tokens['anti-flash_white'][400] },
         secondary: { main: tokens['fire_engine_red'].default },
@@ -110,4 +175,6 @@ export const theme = createTheme({
             }
         }
     }
-})
+}
+
+export const theme = createTheme(themeOne)

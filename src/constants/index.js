@@ -38,6 +38,16 @@ export const SKILLS = [
 
 export const EXPERIENCES = [
     {
+        id: 2,
+        companyName: 'cloudypedia',
+        period: 'September 2023 — current',
+        jobTitle: 'Frontend Engineer',
+        jobTasks: [
+            'Complade: web-based application; digital security solutions and guidelines',
+            'Developing User Interface using NextJS and MUI'
+        ]
+    },
+    {
         id: 0,
         companyName: 'easetechcomp',
         period: 'March 2022 — October 2022',
