@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Passion+One:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300;1,400&family=Montserrat:wght@500;800&family=PT+Serif:ital,wght@0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,800;1,400;1,500&family=Roboto:wght@400;500;900&display=swap");
 
 :root,
 html,
@@ -23,17 +23,39 @@ html {
 
   /* Phone */
   @media only screen and (max-width: 37.5em) {
-    font-size: 40%;
+    font-size: 50%;
   }
-}
-
-body {
-  /* background-image: linear-gradient(to bottom right, #2b5876, #4e4376); */
 }
 
 .app {
   /* contribute to header height */
   padding-top: 64px;
+}
+
+.background-image {
+  /* background: linear-gradient(
+      rgba(248, 248, 248, 0.99),
+      rgba(248, 248, 248, 0.99),
+      rgba(248, 248, 248, 0.99)
+    ),
+    url("assets/imgs/background.webp"); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  /* backdrop-filter: ; */
+  /* background-blend-mode: overlay; */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Custom Scrollbar: For WebKit browsers (Chrome, Safari) */

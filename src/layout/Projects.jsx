@@ -29,73 +29,89 @@ export default function Projects() {
 
   const renderedProjects = PROJECTS.map(
     (project, index) => (
-      // <Reveal key={`${project.name}-${index}`}>
-      <Box
+      <Reveal
         key={`${project.name}-${index}`}
-        bgcolor={hexToRgba(theme.palette.primary.main, 0.5)}
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
-        sx={{
-          outline: 0,
-          // border: `.5px solid ${hexToRgba(
-          //   theme.palette.primary.main,
-          //   0.5
-          // )}`,
-          padding: ".2rem",
-          borderRadius: ".5rem",
-          cursor: "pointer",
-          position: "relative", // To make the overlay relative to this container
-          "&:hover": {
-            "&::before": {
-              content: '""',
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              backgroundColor: hexToRgba(
-                theme.palette.primary.main,
-                0.5
-              ), // Gray overlay color
-              borderRadius: "0.5rem",
-            },
-            "& button": { opacity: 1 },
-          },
-        }}
-        onClick={() => {
-          setOpen(true);
-          setProject(project);
-        }}
+        style={
+          {
+            // alignSelf: "center",
+            // display: "flex",
+            // alignItems: "center",
+            // justifyContent: "center",
+            // width: "100%",
+          }
+        }
       >
-        <Button
-          variant="contained"
-          color="primary"
+        <Box
+          // bgcolor={hexToRgba(theme.palette.primary.main, 0.5)}
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
           sx={{
-            position: "absolute",
-            color: "white",
-            opacity: 0,
-            transition: "opacity 0.5s",
+            outline: 0,
+            width: isPhone ? "75%" : "65rem",
+            marginX: "auto",
+            padding: ".2rem",
+            borderRadius: ".5rem",
+            cursor: "pointer",
+            position: "relative", // To make the overlay relative to this container
+            "&:hover": {
+              "&::before": {
+                content: '""',
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                backgroundColor: hexToRgba(
+                  theme.palette.secondary.main,
+                  0.4
+                ), // Gray overlay color
+                borderRadius: "0.5rem",
+              },
+              "& button": { opacity: 1 },
+            },
+            // border: `.5px solid ${hexToRgba(
+            //   theme.palette.primary.main,
+            //   0.5
+            // )}`,
+          }}
+          onClick={() => {
+            setOpen(true);
+            setProject(project);
           }}
         >
-          More Details
-        </Button>
-        <img
-          src={project.image}
-          alt={project.name}
-          width={isPhone ? "100%" : "650rem"}
-          style={{
-            border: "none",
-            aspectRatio: "2/1",
-            borderRadius: ".5rem",
-            //   filter: "drop-shadow(0 0 5px #555)",
-            boxShadow: `rgba(17, 17, 26, 0.1) 0px 8px 24px,
+          <Button
+            variant="contained"
+            color="secondary"
+            sx={{
+              position: "absolute",
+              color: "white",
+              opacity: 0,
+              transition: "opacity 0.5s",
+              "&:hover": {
+                background: theme.palette.primary.dark,
+              },
+            }}
+          >
+            More Details
+          </Button>
+          <img
+            src={project.image}
+            alt={project.name}
+            style={{
+              border: "none",
+              width: "100%",
+              // aspectRatio: "16/9",
+              // height: 200,
+              borderRadius: ".5rem",
+              //   filter: "drop-shadow(0 0 5px #555)",
+              boxShadow: `rgba(17, 17, 26, 0.1) 0px 8px 24px,
                               rgba(17, 17, 26, 0.1) 0px 16px 56px,
                               rgba(17, 17, 26, 0.1) 0px 24px 80px`,
-          }}
-        />
-      </Box>
-      // </Reveal>
+            }}
+          />
+        </Box>
+      </Reveal>
     )
   );
 
@@ -104,11 +120,11 @@ export default function Projects() {
       id="projects"
       component="section"
       // padding="5rem"
-      marginY={5}
+      // marginY={5}
       sx={{
         display: "flex",
         alignItems: "center",
-        scrollMarginTop: "7rem",
+        scrollMarginTop: "9rem",
         padding: isPhone ? "3rem" : "0 5rem",
       }}
     >
@@ -139,7 +155,7 @@ export default function Projects() {
             justifyContent: "center",
             alignItems: "center",
             flexWrap: "wrap",
-            gap: 1,
+            gap: 2,
           }}
         >
           {renderedProjects}

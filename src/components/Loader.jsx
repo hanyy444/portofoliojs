@@ -19,7 +19,7 @@ export default function Loader() {
           textAlign: "center",
           display: "inline-block",
           letterSpacing: "2px",
-          color: theme.palette.secondary.main,
+          color: theme.palette.primary.main,
           boxSizing: "border-box",
           position: "absolute",
           top: "50%",

@@ -12,6 +12,7 @@ import SideNavbar from "./SideNavbar";
 
 import useScroll from "../utils/useScroll";
 import hexToRgbA from "../utils/hexToRgba";
+import { Home, Person } from "@mui/icons-material";
 
 const NAV_LINKS = [
   "experience",
@@ -57,6 +58,7 @@ export default function Navbar({
               fontSize: "1.5rem",
               color: theme.palette.primary.main,
               "&:hover": {
+                background: "none",
                 color: theme.palette.secondary.main,
               },
             }}
@@ -72,7 +74,7 @@ export default function Navbar({
               fontSize: "1.5rem",
               color: theme.palette.primary.main,
               "&:hover": {
-                color: theme.palette.secondary.main,
+                color: theme.palette.primary.contrastText,
               },
             }}
           >
@@ -87,6 +89,7 @@ export default function Navbar({
     <AppBar
       style={{
         background:
+          // "inherit",
           scrollPosition > 0
             ? hexToRgbA(
                 theme.palette.background.default,
@@ -104,8 +107,23 @@ export default function Navbar({
         <Button
           href="#about"
           onClick={() => setOpenResume(false)}
+          sx={{
+            "&:hover": {
+              background: "none",
+              "& svg": {
+                fill: theme.palette.secondary.main,
+              },
+            },
+          }}
         >
-          <Typography>Ahmed Hany</Typography>
+          {/* <Typography> */}
+          <Person
+            fontSize="large"
+            sx={{
+              fill: theme.palette.primary.main,
+            }}
+          />
+          {/* </Typography> */}
         </Button>
         {renderedNav()}
       </Toolbar>

@@ -11,18 +11,23 @@ import Skills from "./layout/Skills";
 import Projects from "./layout/Projects";
 import Contact from "./layout/Contact";
 import Reveal from "./components/Reveal";
+import { useTheme } from "@mui/material";
 
 const Resume = lazy(() => import("./layout/Resume"));
 const Sides = lazy(() => import("./layout/Sides"));
 const Footer = lazy(() => import("./layout/Footer"));
 
 function App() {
-  const isTablet = useMediaQuery("(max-width: 70em)");
+  const theme = useTheme();
+  const isTablet = useMediaQuery(
+    theme.breakpoints.down("md")
+  );
+
   const [openResume, setOpenResume] = useState(false);
 
   const [preLoading, setPreLoading] = useState(true);
   const preload = () =>
-    setTimeout(() => setPreLoading(false), 1200); // time is relative to the animation duration
+    setTimeout(() => setPreLoading(false), 1000); // time is relative to the animation duration
   useEffect(() => {
     preload();
     return () => clearTimeout(preload);
@@ -32,13 +37,11 @@ function App() {
     window.location.search
   );
 
-  const showExperience = params.get("showExperience")
-    ? params.get("showExperience") === "true"
-    : true;
+  const showExperience =
+    params.get("showExperience") === "true" || true;
 
-  const showResume = params.get("showResume")
-    ? params.get("showResume") === "true"
-    : false;
+  const showResume =
+    params.get("showResume") === "true" || false;
 
   return preLoading ? (
     <>
@@ -46,7 +49,7 @@ function App() {
       <Loader />
     </>
   ) : (
-    <div className="app">
+    <div className="app background-image">
       <CssBaseline />
       <Navbar
         setOpenResume={setOpenResume}

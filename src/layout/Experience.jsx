@@ -27,7 +27,11 @@ export default function Experience() {
     tasks.map((task) => (
       <ListItem
         key={task}
-        sx={{ width: isPhone ? undefined : "75%" }}
+        sx={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "space-between",
+        }}
       >
         <ChevronRightIcon />
         <ListItemText
@@ -36,7 +40,9 @@ export default function Experience() {
               {task}
             </Typography>
           }
-          sx={{ paddingLeft: "1rem" }}
+          sx={{
+            paddingLeft: "1rem",
+          }}
         />
       </ListItem>
     ));
@@ -50,14 +56,14 @@ export default function Experience() {
         </TimelineSeparator>
         <TimelineContent>
           <Box
-            // width="80%"
-            marginLeft={
-              index % 2 !== 0 && !isPhone
-                ? "auto"
-                : undefined
-            }
+          // width="80%"
+          // marginLeft={
+          //   index % 2 !== 0 && !isPhone
+          //     ? "auto"
+          //     : undefined
+          // }
           >
-            <Typography variant="h5">
+            <Typography variant="h5" mb={1}>
               {experience.jobTitle} @{" "}
               {experience.companyName}, Giza
             </Typography>
@@ -71,7 +77,14 @@ export default function Experience() {
                 alignItems:
                   index % 2 === 0 || isPhone
                     ? "flex-start"
-                    : "flex-end",
+                    : "flex-start",
+                "& li div": {
+                  display: "flex",
+                  justifyContent:
+                    index % 2 === 0 || isPhone
+                      ? "flex-start"
+                      : "flex-start",
+                },
               }}
             >
               {renderJobTasks(experience.jobTasks)}
@@ -90,7 +103,7 @@ export default function Experience() {
       // padding="5rem"
       marginY={5}
       sx={{
-        scrollMarginTop: "7rem",
+        scrollMarginTop: "9rem",
         padding: isPhone ? "3rem" : "0 5rem",
       }} // box + inner list margin
     >

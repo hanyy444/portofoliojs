@@ -75,20 +75,16 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
     {
-        image: CofeedImage,
-        name: 'Cofeed',
-        description: 'Social media web application',
-        bgcolor: "#974eaa",
+        image: MonsterImage,
+        name: 'Monster',
+        description: 'Landing page',
+        bgcolor: "#0B1320",
         tools: [
             { name: 'React', icon: ReactIcon },
-            { name: 'Redux', icon: ReduxIcon },
             { name: 'Sass', icon: SassIcon },
-            { name: 'NodeJS', icon: NodeJSIcon },
-            { name: 'MongoDB', icon: MongoDBIcon },
-            { name: 'Firebase', icon: FirebaseIcon },
         ],
-        demo: 'https://cofeed-d3470.web.app',
-        github: 'https://github.com/hanyy444/cofeed'
+        demo: 'https://hanyy444.github.io/monster',
+        github: 'https://github.com/hanyy444/monster'
     },
     {
         image: EcommerceImage,
@@ -108,16 +104,32 @@ export const PROJECTS = [
         github: 'https://github.com/hanyy444/e-commerce',
     },
     {
-        image: MonsterImage,
-        name: 'Monster',
-        description: 'Landing page',
-        bgcolor: "#0B1320",
+        image: CofeedImage,
+        name: 'Cofeed',
+        description: 'Social media web application',
+        bgcolor: "#974eaa",
         tools: [
             { name: 'React', icon: ReactIcon },
+            { name: 'Redux', icon: ReduxIcon },
             { name: 'Sass', icon: SassIcon },
+            { name: 'NodeJS', icon: NodeJSIcon },
+            { name: 'MongoDB', icon: MongoDBIcon },
+            { name: 'Firebase', icon: FirebaseIcon },
         ],
-        demo: 'https://hanyy444.github.io/monster',
-        github: 'https://github.com/hanyy444/monster'
+        demo: 'https://cofeed-d3470.web.app',
+        github: 'https://github.com/hanyy444/cofeed'
+    },
+    {
+        image: DasboardImage,
+        name: 'Dashboard UI',
+        description: 'Modern admin dashboard',
+        bgcolor: "#d90716",
+        tools: [
+            { name: 'React', icon: ReactIcon },
+            { name: 'MaterialUI', icon: MaterialUIIcon }
+        ],
+        demo: 'https://hanyy444.github.io/dashboard/',
+        github: 'https://github.com/hanyy444/dashboard'
     },
     {
         image: BostaImage,
@@ -132,18 +144,6 @@ export const PROJECTS = [
         demo: 'https://bosta-delivery-tracker.vercel.app/',
         github: 'https://github.com/hanyy444/bosta-delivery-tracker'
     },
-    {
-        image: DasboardImage,
-        name: 'Dashboard UI',
-        description: 'Modern admin dashboard',
-        bgcolor: "#d90716",
-        tools: [
-            { name: 'React', icon: ReactIcon },
-            { name: 'MaterialUI', icon: MaterialUIIcon }
-        ],
-        demo: 'https://hanyy444.github.io/dashboard/',
-        github: 'https://github.com/hanyy444/dashboard'
-    }
 ]
 
 export const CONTACT = {

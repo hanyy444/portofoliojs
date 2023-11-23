@@ -29,25 +29,34 @@ export default function Project({ project }) {
         />
       }
       label={
-        <Typography variant="body2" fontSize="1.5rem">
+        <Typography
+          variant="body2"
+          fontSize="1.5rem"
+          color={theme.palette.primary.main}
+        >
           {tool.name}
         </Typography>
       }
-      sx={{ padding: ".5rem" }}
+      sx={{
+        padding: ".5rem",
+        border: `1px solid ${theme.palette.secondary.main}`,
+      }}
     />
   ));
 
   return (
     <Card
       sx={{
-        maxWidth: "60rem",
-        width: "100%",
+        width: "80%",
+        maxWidth: 600,
         position: "absolute",
         top: "50%",
         left: "50%",
         transform: "translate(-50%, -50%)",
-        background: theme.palette.background.paper,
+        background: theme.palette.background.default,
         padding: ".5rem",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
       <Link
@@ -83,15 +92,22 @@ export default function Project({ project }) {
         </Typography>
       </CardContent>
       <Box
+        width="100%"
         display="grid"
-        gridTemplateColumns="repeat(4, 1fr)"
+        gridTemplateColumns="repeat(auto-fit, minmax(12rem, 1fr))"
         padding="1rem"
         gap="1rem"
-        marginBottom="1rem"
+        marginBottom="3rem"
       >
         {renderedTools}
       </Box>
-      <CardActions sx={{ gap: "1rem" }}>
+      <CardActions
+        sx={{
+          gap: "1rem",
+          alignSelf: "flex-end",
+          m: "1rem",
+        }}
+      >
         <Button
           size="medium"
           variant="outlined"

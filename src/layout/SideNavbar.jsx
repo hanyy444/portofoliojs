@@ -32,6 +32,7 @@ export default function SideNavbar({
         color: theme.palette.primary.main,
         "&:hover": {
           color: theme.palette.secondary.main,
+          background: "none",
         },
       }}
     >
@@ -49,9 +50,7 @@ export default function SideNavbar({
           fontSize="large"
           htmlColor={theme.palette.secondary.main}
           sx={{
-            "&:hover": {
-              color: theme.palette.secondary.light,
-            },
+            fill: theme.palette.primary.main,
           }}
         />
       </IconButton>
@@ -67,7 +66,7 @@ export default function SideNavbar({
           textAlign="center"
           role="presentation"
           sx={{
-            background: theme.palette.background.paper,
+            background: theme.palette.background.default,
           }}
           height="100%"
         >
@@ -91,6 +90,7 @@ export default function SideNavbar({
                   color: theme.palette.primary.main,
                   "&:hover": {
                     color: theme.palette.secondary.main,
+                    background: "none",
                   },
                 }}
               >

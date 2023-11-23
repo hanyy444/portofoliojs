@@ -99,7 +99,8 @@ export default function Contact() {
       setShowAlert({
         open: true,
         severity: "error",
-        message: "Please fillout these fields: name, email",
+        message:
+          "Please fill out these fields: name, email",
       });
       return;
     }
@@ -142,6 +143,9 @@ export default function Contact() {
       alignItems="center"
       width="100%"
       marginY={5}
+      sx={{
+        scrollMarginTop: "9rem",
+      }}
     >
       {showAlert.open && (
         <Snackbar
@@ -157,7 +161,10 @@ export default function Contact() {
             variant="filled"
             onClose={() => setShowAlert({ open: false })}
             severity={showAlert.severity}
-            sx={{ width: "100%" }}
+            sx={{
+              width: "100%",
+              background: theme.palette.secondary.main,
+            }}
           >
             {showAlert.message}
           </Alert>
@@ -259,8 +266,8 @@ export default function Contact() {
               variant="contained"
               color="secondary"
               sx={{
-                width: "min(20rem, 100%)",
-                height: "4rem",
+                width: "min(25rem, 100%)",
+                height: "8rem",
                 alignSelf: "center",
               }}
               startIcon={<SendIcon />}

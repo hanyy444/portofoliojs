@@ -36,22 +36,24 @@ export default function Skills() {
       </Typography>
     </Reveal>
   ));
+
   return (
     <Box
       id="skills"
       component="section"
       // height="100vh"
       minHeight="40vh"
-      gap="2rem"
+      gap="5rem"
+      marginBottom={10}
       // padding="5rem"
       sx={{
-        scrollMarginTop: "7rem",
+        scrollMarginTop: "9rem",
         padding: isPhone ? "3rem" : "0 5rem",
       }}
     >
       <Typography
         variant="h4"
-        marginBottom="3rem"
+        marginBottom="4rem"
         textAlign="center"
       >
         Skills
@@ -59,9 +61,9 @@ export default function Skills() {
       <Box
         // height="100%"
         display="grid"
-        gridTemplateColumns="repeat(auto-fit, minmax(20rem, 1fr))"
+        gridTemplateColumns="repeat(auto-fit, minmax(15rem, 1fr))"
         justifyItems="center"
-        gap="2rem"
+        gap={10}
       >
         {renderedSkills}
       </Box>
