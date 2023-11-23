@@ -103,9 +103,9 @@ export default function Project({ project }) {
       </Box>
       <CardActions
         sx={{
-          gap: "1rem",
+          // gap: 1,
           alignSelf: "flex-end",
-          m: "1rem",
+          // m: 1,
         }}
       >
         <Button

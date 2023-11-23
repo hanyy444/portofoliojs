@@ -15,7 +15,9 @@ import Reveal from "../components/Reveal";
 
 export default function Projects() {
   const theme = useTheme();
-  const isPhone = useMediaQuery("(max-width: 60em)");
+  const isPhone = useMediaQuery(
+    theme.breakpoints.down("sm")
+  );
   const [open, setOpen] = useState(false);
   const [project, setProject] = useState({
     image: "",
@@ -26,6 +28,25 @@ export default function Projects() {
     github: "",
     demo: "",
   });
+
+  const hoverStyle = !isPhone
+    ? {
+        "&::before": {
+          content: '""',
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          backgroundColor: hexToRgba(
+            theme.palette.secondary.main,
+            0.4
+          ), // Gray overlay color
+          borderRadius: "0.5rem",
+        },
+        "& button": { opacity: 1 },
+      }
+    : {};
 
   const renderedProjects = PROJECTS.map(
     (project, index) => (
@@ -54,25 +75,10 @@ export default function Projects() {
             borderRadius: ".5rem",
             cursor: "pointer",
             position: "relative", // To make the overlay relative to this container
-            "&:hover": {
-              "&::before": {
-                content: '""',
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                backgroundColor: hexToRgba(
-                  theme.palette.secondary.main,
-                  0.4
-                ), // Gray overlay color
-                borderRadius: "0.5rem",
-              },
-              "& button": { opacity: 1 },
-            },
-            // border: `.5px solid ${hexToRgba(
-            //   theme.palette.primary.main,
-            //   0.5
+            "&:hover": hoverStyle,
+            // border: `.1px solid ${hexToRgba(
+            //   theme.palette.secondary.main,
+            //   1
             // )}`,
           }}
           onClick={() => {
@@ -80,21 +86,23 @@ export default function Projects() {
             setProject(project);
           }}
         >
-          <Button
-            variant="contained"
-            color="secondary"
-            sx={{
-              position: "absolute",
-              color: "white",
-              opacity: 0,
-              transition: "opacity 0.5s",
-              "&:hover": {
-                background: theme.palette.primary.dark,
-              },
-            }}
-          >
-            More Details
-          </Button>
+          {!isPhone && (
+            <Button
+              variant="contained"
+              color="secondary"
+              sx={{
+                position: "absolute",
+                color: "white",
+                opacity: 0,
+                transition: "opacity 0.5s",
+                "&:hover": {
+                  background: theme.palette.primary.dark,
+                },
+              }}
+            >
+              More Details
+            </Button>
+          )}
           <img
             src={project.image}
             alt={project.name}
