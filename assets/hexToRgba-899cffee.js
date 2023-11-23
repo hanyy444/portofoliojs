@@ -1,1 +1,0 @@
-function e(t,n=1){var r;if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(t))return r=t.substring(1).split(""),r.length==3&&(r=[r[0],r[0],r[1],r[1],r[2],r[2]]),r="0x"+r.join(""),"rgba("+[r>>16&255,r>>8&255,r&255].join(",")+`,${n})`;throw new Error("Bad Hex")}export{e as default};
