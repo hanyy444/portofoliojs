@@ -7,10 +7,12 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
+import hexToRgba from "../utils/hexToRgba";
+
 import { PROJECTS } from "../constants";
+
 import MuiModal from "../components/Modal";
 import Project from "../components/Project";
-import hexToRgba from "../utils/hexToRgba";
 import Reveal from "../components/Reveal";
 
 export default function Projects() {

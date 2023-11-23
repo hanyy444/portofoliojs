@@ -4,14 +4,18 @@ import Stack from "@mui/material/Stack";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import CssBaseline from "@mui/material/CssBaseline";
 import Loader from "./components/Loader";
-import Navbar from "./layout/Navbar";
-import About from "./layout/About";
-import Experience from "./layout/Experience";
-import Skills from "./layout/Skills";
-import Projects from "./layout/Projects";
-import Contact from "./layout/Contact";
-import Reveal from "./components/Reveal";
+import Spinner from "./components/Spinner";
 import { useTheme } from "@mui/material";
+
+const Navbar = lazy(() => import("./layout/Navbar"));
+const About = lazy(() => import("./layout/About"));
+const Experience = lazy(() =>
+  import("./layout/Experience")
+);
+const Skills = lazy(() => import("./layout/Skills"));
+const Projects = lazy(() => import("./layout/Projects"));
+const Contact = lazy(() => import("./layout/Contact"));
+const Reveal = lazy(() => import("./components/Reveal"));
 
 const Resume = lazy(() => import("./layout/Resume"));
 const Sides = lazy(() => import("./layout/Sides"));
@@ -56,7 +60,7 @@ function App() {
         showExperience={showExperience}
         showResume={showResume}
       />
-      <Suspense>
+      <Suspense fallback={<Spinner />}>
         {openResume && showResume ? (
           <Resume />
         ) : (
