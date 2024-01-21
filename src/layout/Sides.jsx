@@ -50,7 +50,7 @@ export default function Sides() {
       // backgroundColor: theme.palette.background.default,
       backgroundColor:
         scrollPosition > 1700
-          ? theme.palette.primary.dark
+          ? theme.palette.primary.contrastText
           : theme.palette.primary.main,
       // transition: "all 5s",
     },
@@ -59,7 +59,10 @@ export default function Sides() {
   return (
     <Box>
       <Box sx={{ left: "5rem", ...sideStyles }}>
-        <Socials direction="column" />
+        <Socials
+          direction="column"
+          color={theme.palette.primary.contrastText}
+        />
       </Box>
       <Box
         sx={{ right: "5rem", gap: "13rem", ...sideStyles }}
@@ -89,7 +92,7 @@ export default function Sides() {
               transition: "all .1s ease",
               color:
                 scrollPosition > 1700
-                  ? theme.palette.primary.dark
+                  ? theme.palette.primary.contrastText
                   : theme.palette.primary.main,
               letterSpacing: 1,
               ":hover": {

@@ -58,7 +58,7 @@ export default function Navbar({
               fontSize: "1.5rem",
               color:
                 scrollPosition > 2600
-                  ? theme.palette.primary.dark
+                  ? theme.palette.primary.contrastText
                   : theme.palette.primary.light,
               "&:hover": {
                 background: "none",
@@ -125,7 +125,7 @@ export default function Navbar({
             sx={{
               fill:
                 scrollPosition > 2200
-                  ? theme.palette.primary.dark
+                  ? theme.palette.primary.contrastText
                   : theme.palette.primary.main,
             }}
           />

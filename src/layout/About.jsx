@@ -40,7 +40,7 @@ export default function About() {
   );
 
   const aboutStyles = {
-    height: isTablet ? "90vh" : "100vh",
+    height: isTablet ? "85vh" : "100vh",
     border: "none",
     display: "flex",
     flexDirection: isTablet ? "column" : "row",
@@ -48,7 +48,7 @@ export default function About() {
     justifyContent: isTablet ? "start" : "center",
     gap: "5rem",
     padding: isTablet ? "64px 3rem 0 3rem" : "0 20rem",
-    mb: isTablet ? "20rem" : "0",
+    // mb: isTablet ? "20rem" : "0",
     scrollMarginTop: "calc(5rem + 64px)", // Header + Padding
   };
 

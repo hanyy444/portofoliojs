@@ -98,7 +98,8 @@ export default function Projects() {
                 opacity: 0,
                 transition: "opacity 0.5s",
                 "&:hover": {
-                  background: theme.palette.primary.dark,
+                  background:
+                    theme.palette.primary.contrastText,
                 },
               }}
             >

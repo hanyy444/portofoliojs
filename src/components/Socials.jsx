@@ -22,7 +22,7 @@ const SOCIALS = [
     Icon: LinkedIn,
   },
 ];
-export default function Socials({ direction }) {
+export default function Socials({ color, direction }) {
   const theme = useTheme();
   const scrollPosition = useScroll();
 
@@ -63,7 +63,7 @@ export default function Socials({ direction }) {
                 height: "3rem",
                 fill:
                   scrollPosition > 1700
-                    ? theme.palette.primary.dark
+                    ? color
                     : theme.palette.primary.main,
                 "&:hover": {
                   fill: theme.palette.secondary.main,
