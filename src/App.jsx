@@ -32,7 +32,7 @@ function App() {
   const [preLoading, setPreLoading] = useState(true);
   // preload time is relative to the animation duration + delay
   const preload = () =>
-    setTimeout(() => setPreLoading(false), 1700);
+    setTimeout(() => setPreLoading(false), 1500);
 
   useEffect(() => {
     preload();
