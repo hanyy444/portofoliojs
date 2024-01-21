@@ -1,1 +1,0 @@
-import{b as e,j as r,S as o,T as t,F as a}from"./index-dd29c64c.js";import{S as s}from"./Socials-f6f0e216.js";function p(){return e(),r.jsxs(o,{id:"footer",padding:"5rem",gap:"1rem",children:[r.jsx(s,{direction:"row"}),r.jsx(t,{textAlign:"center",variant:"body2",children:a.copyright})]})}export{p as default};
