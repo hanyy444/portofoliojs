@@ -40,12 +40,12 @@ const CustomTextField = ({ style, ...props }) => {
         },
         "& .MuiInputLabel-shrink": {
           transform: "translate(25px, -9px) scale(0.75)",
-          color: theme.palette.primary.contrastText,
-          opacity: 0.5,
+          color: theme.palette.grey[800],
+          opacity: 0.4,
         },
         "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
           {
-            borderColor: theme.palette.primary.contrastText,
+            borderColor: theme.palette.grey[800],
           },
         ...style,
       }}
