@@ -4,13 +4,7 @@ export default function Loader() {
   const theme = useTheme();
 
   return (
-    <Box
-      position="relative"
-      height="100vh"
-      width="100%"
-      overflow="hidden"
-      bgcolor={theme.palette.background.default}
-    >
+    <Box>
       <Typography
         variant="h2"
         component="p"
@@ -26,7 +20,7 @@ export default function Loader() {
           left: "50%",
           transform: "translate(-50%, -100%)",
           animation:
-            "spotlight 1.2s linear infinite alternate",
+            "spotlight 1.2s linear infinite alternate .3s",
         }}
       >
         Ahmed Hany

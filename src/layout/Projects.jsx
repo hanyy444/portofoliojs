@@ -71,7 +71,7 @@ export default function Projects() {
           justifyContent="center"
           sx={{
             outline: 0,
-            width: isPhone ? "75%" : "65rem",
+            width: isPhone ? "75%" : "40rem",
             marginX: "auto",
             padding: ".2rem",
             borderRadius: ".5rem",
@@ -114,10 +114,10 @@ export default function Projects() {
               // aspectRatio: "16/9",
               // height: 200,
               borderRadius: ".5rem",
-              //   filter: "drop-shadow(0 0 5px #555)",
-              boxShadow: `rgba(17, 17, 26, 0.1) 0px 8px 24px,
-                              rgba(17, 17, 26, 0.1) 0px 16px 56px,
-                              rgba(17, 17, 26, 0.1) 0px 24px 80px`,
+              // filter: "drop-shadow(0 0 4px #555)",
+              boxShadow: `rgba(17, 17, 26, 0.3) 0px 8px 24px,
+                              rgba(17, 17, 26, 0.3) 0px 16px 56px,
+                              rgba(17, 17, 26, 0.3) 0px 24px 80px`,
             }}
           />
         </Box>
@@ -130,7 +130,7 @@ export default function Projects() {
       id="projects"
       component="section"
       // padding="5rem"
-      // marginY={5}
+      // marginY="15rem"
       sx={{
         display: "flex",
         alignItems: "center",
@@ -142,6 +142,7 @@ export default function Projects() {
         variant="h4"
         marginBottom="2rem"
         textAlign="center"
+        color={theme.palette.primary.main}
       >
         Projects
       </Typography>

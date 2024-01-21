@@ -32,7 +32,7 @@ export default function Project({ project }) {
         <Typography
           variant="body2"
           fontSize="1.5rem"
-          color={theme.palette.primary.main}
+          color={theme.palette.primary.contrastText}
         >
           {tool.name}
         </Typography>
@@ -87,12 +87,15 @@ export default function Project({ project }) {
         >
           {project.name}
         </Typography>
-        <Typography variant="body2">
+        <Typography
+          variant="body2"
+          color={theme.palette.primary.contrastText}
+        >
           {project.description}
         </Typography>
       </CardContent>
       <Box
-        width="100%"
+        // width="100%"
         display="grid"
         gridTemplateColumns="repeat(auto-fit, minmax(12rem, 1fr))"
         padding="1rem"
@@ -114,7 +117,13 @@ export default function Project({ project }) {
           href={project.github}
           rel="noopener"
           target="_blank"
-          sx={{ fontSize: "1.5rem" }}
+          sx={{
+            fontSize: "1.5rem",
+            color: theme.palette.primary.contrastText,
+            "&:hover": {
+              background: theme.palette.grey[300],
+            },
+          }}
         >
           Github
         </Button>

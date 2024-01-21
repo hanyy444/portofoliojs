@@ -26,34 +26,34 @@ const CustomTextField = ({ style, ...props }) => {
       variant="outlined"
       sx={{
         "& .MuiOutlinedInput-notchedOutline": {
-          border: `1px solid ${theme.palette.primary.main}`,
+          border: `.5px solid ${theme.palette.primary.contrastText}`,
         },
         "& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline":
           {
-            borderColor: theme.palette.primary.main,
+            borderColor: theme.palette.primary.contrastText,
           },
         "& .MuiInputLabel-root": {
-          color: theme.palette.primary.main,
+          color: theme.palette.primary.contrastText,
           fontSize: "2rem",
-          opacity: 0.8,
+          opacity: 0.4,
           fontWeight: 500,
         },
         "& .MuiInputLabel-shrink": {
           transform: "translate(25px, -9px) scale(0.75)",
-          color: theme.palette.primary.main,
-          opacity: 1,
+          color: theme.palette.primary.contrastText,
+          opacity: 0.5,
         },
         "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
           {
-            borderColor: theme.palette.primary.main,
+            borderColor: theme.palette.primary.contrastText,
           },
         ...style,
       }}
       inputProps={{
         sx: {
-          color: theme.palette.primary.main,
+          // color: theme.palette.secondary.dark,
           fontSize: "2rem",
-          background: theme.palette.background.default,
+          // background: theme.palette.background.default,
           "&:-webkit-autofill": {
             WebkitBoxShadow: `0 0 0 1000px ${theme.palette.background.default} inset`,
             WebkitTextFillColor: theme.palette.primary.main,
@@ -141,10 +141,12 @@ export default function Contact() {
       id="contact"
       component="section"
       alignItems="center"
-      width="100%"
-      marginY={5}
+      // width="100%"
+      // marginY={5}
+      // paddingX={5}
       sx={{
         scrollMarginTop: "9rem",
+        padding: isPhone ? "5rem" : "0 10rem",
       }}
     >
       {showAlert.open && (
@@ -195,13 +197,6 @@ export default function Contact() {
             padding="5rem"
             width={isPhone ? "100%" : "75rem"}
             gap="2rem"
-            sx={{
-              "& textarea::placeholder": {
-                color: `${theme.palette.primary.main} !important`,
-                fontWeight: "bold",
-                opacity: 0.8,
-              },
-            }}
           >
             <CustomTextField
               label="Name"
@@ -239,27 +234,20 @@ export default function Contact() {
               }
               helperText={touched.subject && errors.subject}
             />
-            <TextareaAutosize
+            <CustomTextField
+              fullWidth
+              label="Message"
               name="message"
+              multiline
+              minRows={5}
               value={values.message}
               onBlur={handleBlur}
               onChange={handleChange}
-              placeholder="Message"
-              minRows={5}
-              style={{
-                width: "100%",
-                fontSize: "2rem",
-                padding: "1rem",
-                backgroundColor:
-                  theme.palette.background.default,
-                color: theme.palette.primary.main,
-                border: `1px solid ${theme.palette.primary.main}`,
-                borderRadius: ".5rem",
-                resize: "none",
-                "&:focus, &:hover": {
-                  borderColor: theme.palette.secondary.main,
-                },
-              }}
+              error={
+                Boolean(touched.message) &&
+                Boolean(errors.message)
+              }
+              helperText={touched.message && errors.message}
             />
             <Button
               type="submit"

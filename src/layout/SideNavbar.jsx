@@ -8,6 +8,7 @@ import {
   useTheme,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import useScroll from "../utils/useScroll";
 
 export default function SideNavbar({
   links,
@@ -15,6 +16,7 @@ export default function SideNavbar({
   showResume,
 }) {
   const theme = useTheme();
+  const scrollPosition = useScroll();
   const [navOpen, setNavOpen] = useState(false);
 
   const renderedLinks = links.map((link) => (
@@ -50,7 +52,10 @@ export default function SideNavbar({
           fontSize="large"
           htmlColor={theme.palette.secondary.main}
           sx={{
-            fill: theme.palette.primary.main,
+            fill:
+              scrollPosition > 1700
+                ? theme.palette.primary.contrastText
+                : theme.palette.primary.main,
           }}
         />
       </IconButton>
@@ -59,15 +64,18 @@ export default function SideNavbar({
         open={navOpen}
         elevation={10}
         onClose={() => setNavOpen(false)}
+        sx={{
+          "& .MuiPaper-root": {
+            background: `url("assets/imgs/background6.svg")`,
+            // background: theme.palette.background.paper,
+          },
+        }}
       >
         <Box
           p={4}
           width="25rem"
           textAlign="center"
           role="presentation"
-          sx={{
-            background: theme.palette.background.default,
-          }}
           height="100%"
         >
           <Stack

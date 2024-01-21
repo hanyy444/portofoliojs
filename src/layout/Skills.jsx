@@ -29,7 +29,7 @@ export default function Skills() {
           style={{
             width: "3rem",
             height: "3rem",
-            fill: theme.palette.secondary.main,
+            fill: theme.palette.secondary.light,
           }}
         />
         {skill.name}
@@ -44,17 +44,19 @@ export default function Skills() {
       // height="100vh"
       minHeight="40vh"
       gap="5rem"
+      // marginY="15rem"
       marginBottom={10}
       // padding="5rem"
       sx={{
         scrollMarginTop: "9rem",
-        padding: isPhone ? "3rem" : "0 5rem",
+        padding: isPhone ? "3rem" : "0 10rem",
       }}
     >
       <Typography
         variant="h4"
         marginBottom="4rem"
         textAlign="center"
+        color={theme.palette.primary.main}
       >
         Skills
       </Typography>

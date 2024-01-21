@@ -6,6 +6,7 @@ import {
   useTheme,
 } from "@mui/material";
 import { LinkedIn, GitHub } from "@mui/icons-material";
+import useScroll from "../utils/useScroll";
 
 const SOCIALS = [
   {
@@ -23,6 +24,8 @@ const SOCIALS = [
 ];
 export default function Socials({ direction }) {
   const theme = useTheme();
+  const scrollPosition = useScroll();
+
   return (
     <Stack
       gap={2}
@@ -36,7 +39,7 @@ export default function Socials({ direction }) {
             <Typography
               variant="body2"
               sx={{
-                color: theme.palette.primary.contrastText,
+                color: theme.palette.primary.main,
               }}
             >
               {social.name}
@@ -58,7 +61,10 @@ export default function Socials({ direction }) {
                 cursor: "pointer",
                 width: "3rem",
                 height: "3rem",
-                fill: theme.palette.primary.main,
+                fill:
+                  scrollPosition > 1700
+                    ? theme.palette.primary.dark
+                    : theme.palette.primary.main,
                 "&:hover": {
                   fill: theme.palette.secondary.main,
                 },

@@ -68,7 +68,7 @@ const backgroundColor = '#f8f8f8'
 
 const themeOne = {
     palette: {
-        primary: { main: primaryColor },
+        primary: { main: backgroundColor },
         secondary: { main: secondaryColor },
         background: {
             default: backgroundColor,
@@ -81,7 +81,7 @@ const themeOne = {
         h1: {
             fontSize: '7rem',
             fontWeight: 900,
-            color: primaryColor,
+            color: backgroundColor,
             fontFamily: 'Montserrat'
         },
         h2: { fontSize: '5rem', fontWeight: '600' },
@@ -105,7 +105,7 @@ const themeOne = {
         },
         body2: {
             fontSize: '1.8rem',
-            color: primaryColor,
+            color: backgroundColor,
             fontWeight: 500,
             fontFamily: ['Lato', 'Passion One', 'sans-serif'].join(',')
         },
@@ -127,8 +127,8 @@ const themeOne = {
     components: {
         MuiTooltip: {
             styleOverrides: {
-                tooltip: { backgroundColor: tokens.cool_gray[100] },
-                arrow: { color: tokens.cool_gray[100] }
+                tooltip: { backgroundColor: secondaryColor },
+                arrow: { color: secondaryColor }
             }
         }
     }

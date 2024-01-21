@@ -6,6 +6,7 @@ import {
   ListItem,
   ListItemText,
   useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import { EXPERIENCES } from "../constants";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
@@ -21,6 +22,7 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import Reveal from "../components/Reveal";
 
 export default function Experience() {
+  const theme = useTheme();
   const isPhone = useMediaQuery("(max-width: 60em)");
 
   const renderJobTasks = (tasks) =>
@@ -28,22 +30,54 @@ export default function Experience() {
       <ListItem
         key={task}
         sx={{
-          width: "100%",
+          // width: "100%",
           display: "flex",
-          justifyContent: "space-between",
+          flexDirection: "column",
+          justifyContent: "flex-start",
+          alignItems: "start",
         }}
       >
-        <ChevronRightIcon />
         <ListItemText
           primary={
-            <Typography variant="body2" fontSize="2rem">
-              {task}
-            </Typography>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: 1,
+              }}
+            >
+              <ChevronRightIcon />
+              <Typography
+                variant="body2"
+                fontSize="2rem"
+                fontWeight={task.subtitle ? 800 : 400}
+              >
+                {task.subtitle || task}
+              </Typography>
+            </Box>
           }
-          sx={{
-            paddingLeft: "1rem",
-          }}
         />
+
+        {task.subtitle && (
+          <List>
+            {task.subTasks.map((subtask) => (
+              <ListItem
+                key={subtask}
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "start",
+                  gap: 1,
+                }}
+              >
+                <ChevronRightIcon />
+                <Typography variant="body2">
+                  {subtask}
+                </Typography>
+              </ListItem>
+            ))}
+          </List>
+        )}
       </ListItem>
     ));
 
@@ -56,16 +90,19 @@ export default function Experience() {
         </TimelineSeparator>
         <TimelineContent>
           <Box
-          // width="80%"
-          // marginLeft={
-          //   index % 2 !== 0 && !isPhone
-          //     ? "auto"
-          //     : undefined
-          // }
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems:
+                (index % 2 === 0 && !isPhone) || isPhone
+                  ? "start"
+                  : "end",
+            }}
           >
             <Typography variant="h5" mb={1}>
               {experience.jobTitle} @{" "}
-              {experience.companyName}, Giza
+              {experience.companyName},{" "}
+              {experience.location}
             </Typography>
             <Typography variant="body2">
               {experience.period}
@@ -74,16 +111,12 @@ export default function Experience() {
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                alignItems:
-                  index % 2 === 0 || isPhone
-                    ? "flex-start"
-                    : "flex-start",
-                "& li div": {
+                "& li div ": {
                   display: "flex",
-                  justifyContent:
-                    index % 2 === 0 || isPhone
-                      ? "flex-start"
-                      : "flex-start",
+                  // alignItems:
+                  //   index % 2 === 0 || isPhone
+                  //     ? "flex-end"
+                  //     : "flex-start",
                 },
               }}
             >
@@ -101,7 +134,7 @@ export default function Experience() {
       component="section"
       // height="100vh"
       // padding="5rem"
-      marginY={5}
+      // marginY={5}
       sx={{
         scrollMarginTop: "9rem",
         padding: isPhone ? "3rem" : "0 5rem",
@@ -111,6 +144,7 @@ export default function Experience() {
         variant="h4"
         marginBottom="3rem"
         textAlign="center"
+        color={theme.palette.primary.main}
       >
         Experience
       </Typography>

@@ -12,10 +12,27 @@
 
 :root,
 html,
-body,
-.app {
-  height: 100%;
+body {
+  height: 100vh;
   width: 100%;
+  margin: 0;
+  /* background: rgb(51, 51, 51);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(51, 51, 51, 1) 0%,
+    rgba(52, 152, 219, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(51, 51, 51, 1) 0%,
+    rgba(52, 152, 219, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(51, 51, 51, 1) 0%,
+    rgba(52, 152, 219, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#333333",endColorstr="#3498db",GradientType=1); */
 }
 
 html {
@@ -28,12 +45,17 @@ html {
   }
 
   @media only screen and (max-width: 60em) {
-    font-size: 55%;
+    font-size: 50%;
   }
 
   /* Phone */
   @media only screen and (max-width: 37.5em) {
-    font-size: 50%;
+    font-size: 48%;
+  }
+
+  /* Small Phone */
+  @media only screen and (max-width: 30em) {
+    font-size: 34%;
   }
 }
 
@@ -43,18 +65,13 @@ html {
 }
 
 .background-image {
-  /* background: linear-gradient(
-      rgba(248, 248, 248, 0.99),
-      rgba(248, 248, 248, 0.99),
-      rgba(248, 248, 248, 0.99)
-    ),
-    url("assets/imgs/background.webp"); */
+  /* background: "#1C3D53", url("assets/imgs/background6.svg"); */
   background-size: cover;
-  background-position: center;
+  background-position: 35%;
+  /* background-position: center; */
   background-repeat: no-repeat;
   background-blend-mode: overlay;
   /* backdrop-filter: ; */
-  /* background-blend-mode: overlay; */
 }
 
 .overlay {

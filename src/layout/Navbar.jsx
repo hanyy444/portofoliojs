@@ -6,13 +6,12 @@ import {
   Button,
   useMediaQuery,
   useTheme,
-  Typography,
 } from "@mui/material";
 import SideNavbar from "./SideNavbar";
 
 import useScroll from "../utils/useScroll";
 import hexToRgbA from "../utils/hexToRgba";
-import { Home, Person } from "@mui/icons-material";
+import { Person } from "@mui/icons-material";
 
 const NAV_LINKS = [
   "experience",
@@ -55,8 +54,12 @@ export default function Navbar({
             href={`#${link}`}
             onClick={() => setOpenResume(false)}
             sx={{
+              zIndex: 100,
               fontSize: "1.5rem",
-              color: theme.palette.primary.main,
+              color:
+                scrollPosition > 2600
+                  ? theme.palette.primary.dark
+                  : theme.palette.primary.light,
               "&:hover": {
                 background: "none",
                 color: theme.palette.secondary.main,
@@ -87,15 +90,15 @@ export default function Navbar({
 
   return (
     <AppBar
+      // className="background-image"
       style={{
-        background:
-          // "inherit",
-          scrollPosition > 0
-            ? hexToRgbA(
-                theme.palette.background.default,
-                0.75
-              )
-            : theme.palette.background.default,
+        zIndex: 1000,
+        background: "transparent",
+        // color:
+        //   // "inherit",
+        //   scrollPosition > 2200
+        //     ? hexToRgbA(theme.palette.primary.main, 0.65)
+        //     : `url("assets/imgs/background1.svg")`,
       }}
     >
       <Toolbar
@@ -120,7 +123,10 @@ export default function Navbar({
           <Person
             fontSize="large"
             sx={{
-              fill: theme.palette.primary.main,
+              fill:
+                scrollPosition > 2200
+                  ? theme.palette.primary.dark
+                  : theme.palette.primary.main,
             }}
           />
           {/* </Typography> */}

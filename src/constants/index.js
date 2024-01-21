@@ -12,12 +12,15 @@ import { ReactComponent as TailwindIcon } from '../assets/icons/tailwind.svg'
 import { ReactComponent as FirebaseIcon } from '../assets/icons/firebase.svg'
 import { ReactComponent as ReduxIcon } from '../assets/icons/redux.svg'
 import { ReactComponent as StripeIcon } from '../assets/icons/stripe.svg'
+import { ReactComponent as NextJSIcon } from '../assets/icons/nextjs.svg'
 
 import CofeedImage from '../assets/imgs/cofeed.jpeg'
 import EcommerceImage from '../assets/imgs/ecommerce.jpeg'
 import MonsterImage from '../assets/imgs/monster.png'
 import BostaImage from '../assets/imgs/bosta.jpeg'
 import DasboardImage from '../assets/imgs/dashboard.jpeg'
+import EcommerceAdminDashboardImage from '../assets/imgs/e-commerce-admin.jpeg'
+import EcommerceStoreImage from '../assets/imgs/e-commerce-store.jpeg'
 
 export const SKILLS = [
     { id: 0, name: 'React', icon: ReactIcon },
@@ -34,46 +37,80 @@ export const SKILLS = [
     { id: 10, name: 'Tailwind', icon: TailwindIcon },
     { id: 11, name: 'Firebase', icon: FirebaseIcon },
     { id: 13, name: 'Stripe', icon: StripeIcon },
+    { id: 14, name: 'NextJS', icon: NextJSIcon },
 ]
 
 export const EXPERIENCES = [
     {
         id: 2,
         companyName: 'cloudypedia',
+        location: 'Canada - Remote',
         period: 'September 2023 — current',
         jobTitle: 'Frontend Engineer',
         jobTasks: [
-            'Complade: web-based application; digital security solutions and guidelines',
-            'Developing User Interface using NextJS and MUI'
+            {
+                subtitle: 'Freightslayer: web-based application; freight brokering',
+                subTasks: [
+                    'Build user interfaces with React & Tailwind',
+                    'Create designs and wireframes with Figma',
+                    'Restructure navigation handling, organize and refactor codebase',
+                    'Optimize for performance and minimize bandwidth'
+                ]
+            },
+            {
+                subtitle: 'Complade: web-based application; digital security solutions and guidelines',
+                subTasks: [
+                    'Creating user interfaces with NextJS & Material UI',
+                ]
+            },
         ]
     },
     {
         id: 0,
         companyName: 'easetechcomp',
+        location: 'Giza',
         period: 'March 2022 — October 2022',
         jobTitle: 'Full Stack Engineer',
         jobTasks: [
-            'Fora Application: sports-related bookings mobile application',
-            'Developed dashboard to manage application resources',
-            'Developed application programming interface for the application',
-            'Implemented server-side application logic and database querying',
-            'Libraries & Frameworks: React, NodeJS, Express & MongoDB'
+            {
+                subtitle: 'Fora Application: sports-related bookings mobile application',
+                subTasks: [
+                    'Developed dashboard to manage application resources',
+                    'Implemented server-side application logic, api and database querying',
+                    'Libraries & Frameworks: React, NodeJS, Express & MongoDB'
+                ]
+            }
         ]
     },
     {
         id: 1,
         companyName: 'arpuplus',
+        location: 'Giza',
         period: 'August 2020 — October 2020',
         jobTitle: 'Intern',
         jobTasks: [
             "Developed admin dashboard",
             'Developed a configurable windows service to split and filter huge-sized files',
             'Libraries & Frameworks: ASP.NET MVC 5, Entity Framework & Razor Views'
+
         ]
     },
 ]
 
 export const PROJECTS = [
+    {
+        image: EcommerceAdminDashboardImage,
+        name: 'Ecommerce Admin Dashboard',
+        description: 'E-commerce admin dashboard',
+        bgcolor: "#0B1320",
+        tools: [
+            { name: 'React', icon: ReactIcon },
+            { name: 'Typescript', icon: TypeScriptIcon },
+            { name: 'NextJS', icon: NextJSIcon },
+        ],
+        demo: 'https://ecommerce-admin-five-gold.vercel.app/655500866b5675f63ce0f2a9',
+        github: 'https://github.com/hanyy444/ecommerce-admin'
+    },
     {
         image: MonsterImage,
         name: 'Monster',
@@ -120,16 +157,17 @@ export const PROJECTS = [
         github: 'https://github.com/hanyy444/cofeed'
     },
     {
-        image: DasboardImage,
-        name: 'Dashboard UI',
-        description: 'Modern admin dashboard',
-        bgcolor: "#d90716",
+        image: EcommerceStoreImage,
+        name: 'Ecommerce Store',
+        description: 'E-commerce store',
+        bgcolor: "#0B1320",
         tools: [
             { name: 'React', icon: ReactIcon },
-            { name: 'MaterialUI', icon: MaterialUIIcon }
+            { name: 'Typescript', icon: TypeScriptIcon },
+            { name: 'Material-UI', icon: MaterialUIIcon },
         ],
-        demo: 'https://hanyy444.github.io/dashboard/',
-        github: 'https://github.com/hanyy444/dashboard'
+        demo: 'https://ecommerce-store-omega-brown.vercel.app/',
+        github: 'https://github.com/hanyy444/ecommerce-store'
     },
     {
         image: BostaImage,
@@ -144,6 +182,19 @@ export const PROJECTS = [
         demo: 'https://bosta-delivery-tracker.vercel.app/',
         github: 'https://github.com/hanyy444/bosta-delivery-tracker'
     },
+    {
+        image: DasboardImage,
+        name: 'Dashboard UI',
+        description: 'Modern admin dashboard',
+        bgcolor: "#d90716",
+        tools: [
+            { name: 'React', icon: ReactIcon },
+            { name: 'MaterialUI', icon: MaterialUIIcon }
+        ],
+        demo: 'https://hanyy444.github.io/dashboard/',
+        github: 'https://github.com/hanyy444/dashboard'
+    },
+
 ]
 
 export const CONTACT = {

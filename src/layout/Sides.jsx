@@ -7,28 +7,11 @@ import {
 } from "@mui/material";
 import Socials from "../components/socials";
 import { CONTACT } from "../constants";
-
-const sideStyles = {
-  width: "1rem",
-  zIndex: 2,
-  position: "fixed",
-  bottom: 0,
-  display: "flex",
-  flexDirection: "column",
-  justifyItems: "center",
-  alignItems: "center",
-  "&::after": {
-    width: ".3rem",
-    content: '""',
-    display: "block",
-    height: "12rem",
-    borderRadius: "2rem",
-    backgroundColor: "#333",
-  },
-};
+import useScroll from "../utils/useScroll";
 
 export default function Sides() {
   const theme = useTheme();
+  const scrollPosition = useScroll();
 
   const [tooltipTitle, setTooltipTitle] =
     useState("Click to copy");
@@ -43,11 +26,35 @@ export default function Sides() {
     1000
   );
 
-  const onMouseOut = useCallback(() => timout, []);
+  const onMouseOut = useCallback(() => timout, [timout]);
 
   useEffect(() => {
     return () => clearTimeout(timout);
-  }, []);
+  }, [timout]);
+
+  const sideStyles = {
+    width: "1rem",
+    zIndex: 2,
+    position: "fixed",
+    bottom: 0,
+    display: "flex",
+    flexDirection: "column",
+    justifyItems: "center",
+    alignItems: "center",
+    "&::after": {
+      width: ".3rem",
+      content: '""',
+      display: "block",
+      height: "12rem",
+      borderRadius: "2rem",
+      // backgroundColor: theme.palette.background.default,
+      backgroundColor:
+        scrollPosition > 1700
+          ? theme.palette.primary.dark
+          : theme.palette.primary.main,
+      // transition: "all 5s",
+    },
+  };
 
   return (
     <Box>
@@ -62,7 +69,7 @@ export default function Sides() {
             <Typography
               variant="body2"
               sx={{
-                color: theme.palette.primary.contrastText,
+                color: theme.palette.primary.main,
               }}
             >
               {tooltipTitle}
@@ -80,6 +87,10 @@ export default function Sides() {
             sx={{
               transform: "rotate(90deg)",
               transition: "all .1s ease",
+              color:
+                scrollPosition > 1700
+                  ? theme.palette.primary.dark
+                  : theme.palette.primary.main,
               letterSpacing: 1,
               ":hover": {
                 color: "secondary.main",
