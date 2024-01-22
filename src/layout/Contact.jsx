@@ -39,7 +39,9 @@ const CustomTextField = ({ style, ...props }) => {
           fontWeight: 500,
         },
         "& .MuiInputLabel-shrink": {
-          transform: "translate(25px, -9px) scale(0.75)",
+          // transform: "translate(20px, -5px) scale(0.75)",
+          // transform: "translate(40%, -40%) scale(.75)",
+          background: "transparent",
           color: "#333",
           opacity: 0.8,
         },
