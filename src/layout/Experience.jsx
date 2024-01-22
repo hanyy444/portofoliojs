@@ -28,7 +28,7 @@ export default function Experience() {
   const renderJobTasks = (tasks) =>
     tasks.map((task) => (
       <ListItem
-        key={task}
+        key={task.subtitle || task}
         sx={{
           // width: "100%",
           display: "flex",
@@ -134,7 +134,7 @@ export default function Experience() {
       component="section"
       // height="100vh"
       // padding="5rem"
-      // marginY={5}
+      marginTop={5}
       sx={{
         scrollMarginTop: "9rem",
         padding: isPhone ? "3rem" : "0 5rem",
@@ -142,7 +142,7 @@ export default function Experience() {
     >
       <Typography
         variant="h4"
-        marginBottom="3rem"
+        marginBottom="5rem"
         textAlign="center"
         color={theme.palette.primary.main}
       >

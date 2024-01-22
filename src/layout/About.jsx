@@ -105,7 +105,7 @@ export default function About() {
           fontWeight={400}
           // color={theme.palette.primary.contrastText}
         >
-          creating web solutions with a passion for
+          Creating web solutions with a passion for
           technology.
         </Typography>
         {isTablet && imageBox}

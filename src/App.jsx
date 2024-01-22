@@ -97,10 +97,10 @@ function App() {
               <Projects />
               <Reveal>
                 <Contact />
-              </Reveal>
-              <Reveal>
                 {!isTablet ? <Sides /> : <Footer />}
               </Reveal>
+              {/* <Reveal> */}
+              {/* </Reveal> */}
             </Stack>
           )}
           {/* </Suspense> */}

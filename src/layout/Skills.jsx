@@ -65,6 +65,7 @@ export default function Skills() {
         display="grid"
         gridTemplateColumns="repeat(auto-fit, minmax(15rem, 1fr))"
         justifyItems="center"
+        padding="5rem"
         gap={10}
       >
         {renderedSkills}

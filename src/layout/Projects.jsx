@@ -167,6 +167,7 @@ export default function Projects() {
             justifyContent: "center",
             alignItems: "center",
             flexWrap: "wrap",
+            padding: "5rem 0",
             gap: 2,
           }}
         >

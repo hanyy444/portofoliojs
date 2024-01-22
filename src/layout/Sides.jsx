@@ -18,7 +18,7 @@ export default function Sides() {
 
   const handleCopy = useCallback(async () => {
     await navigator.clipboard.writeText(CONTACT.email);
-    setTooltipTitle("copied");
+    setTooltipTitle("Copied");
   }, []);
 
   const timout = setTimeout(

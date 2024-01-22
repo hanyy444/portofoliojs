@@ -16,27 +16,12 @@ body {
   height: 100vh;
   width: 100%;
   margin: 0;
-  /* background: rgb(51, 51, 51);
-  background: -moz-linear-gradient(
-    180deg,
-    rgba(51, 51, 51, 1) 0%,
-    rgba(52, 152, 219, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    180deg,
-    rgba(51, 51, 51, 1) 0%,
-    rgba(52, 152, 219, 1) 100%
-  );
-  background: linear-gradient(
-    180deg,
-    rgba(51, 51, 51, 1) 0%,
-    rgba(52, 152, 219, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#333333",endColorstr="#3498db",GradientType=1); */
+  padding: 0;
+  overscroll-behavior: none;
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 55%;
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -57,11 +42,6 @@ html {
   @media only screen and (max-width: 30em) {
     font-size: 34%;
   }
-}
-
-.app {
-  /* contribute to header height */
-  padding-top: 64px;
 }
 
 .background-image {

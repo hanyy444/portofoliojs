@@ -201,7 +201,7 @@ export default function Contact() {
             onSubmit={handleSubmit}
             borderRadius=".5rem"
             alignItems="center"
-            padding="5rem"
+            padding="5rem 0 3rem 0"
             width={isPhone ? "100%" : "75rem"}
             gap="2rem"
           >
