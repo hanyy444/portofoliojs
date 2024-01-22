@@ -54,7 +54,7 @@ export default function Skills() {
     >
       <Typography
         variant="h4"
-        marginBottom="4rem"
+        marginBottom="5rem"
         textAlign="center"
         color={theme.palette.primary.main}
       >
@@ -65,7 +65,7 @@ export default function Skills() {
         display="grid"
         gridTemplateColumns="repeat(auto-fit, minmax(15rem, 1fr))"
         justifyItems="center"
-        padding="5rem"
+        paddingY="5rem"
         gap={10}
       >
         {renderedSkills}
