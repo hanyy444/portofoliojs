@@ -26,26 +26,31 @@ const CustomTextField = ({ style, ...props }) => {
       variant="outlined"
       sx={{
         "& .MuiOutlinedInput-notchedOutline": {
-          border: `.5px solid ${theme.palette.primary.contrastText}`,
+          // border: `.5px solid ${"#333"}`,
         },
         "& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline":
           {
-            borderColor: theme.palette.primary.contrastText,
+            borderColor: "#333",
           },
         "& .MuiInputLabel-root": {
-          color: theme.palette.primary.contrastText,
+          color: "#333",
           fontSize: "2rem",
           opacity: 0.4,
           fontWeight: 500,
         },
         "& .MuiInputLabel-shrink": {
           transform: "translate(25px, -9px) scale(0.75)",
-          color: theme.palette.grey[800],
-          opacity: 0.4,
+          color: "#333",
+          opacity: 0.8,
+        },
+        "& label": {
+          color: "#333 !important",
+          opacity: 0.8,
+          borderColor: "#333",
         },
         "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
           {
-            borderColor: theme.palette.grey[800],
+            borderColor: "#333",
           },
         ...style,
       }}

@@ -29,8 +29,8 @@ function App() {
 
   const [openResume, setOpenResume] = useState(false);
 
-  const [preLoading, setPreLoading] = useState(true);
   // preload time is relative to the animation duration + delay
+  const [preLoading, setPreLoading] = useState(true);
   const preload = () =>
     setTimeout(() => setPreLoading(false), 1500);
 
