@@ -62,7 +62,7 @@ function App() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundBlendMode: "overlay",
-        backgroundPosition: "35%",
+        backgroundPosition: "32%",
         // background: preLoading
         //   ? "rgb(51,51,51)"
         //   : "linear-gradient(180deg, rgba(8,22,40,1) 0%, rgba(23,51,67,1) 25%, rgba(52,102,135,1) 50%, rgba(62,136,186,1) 75%, rgba(91,150,191,1) 100%)",
