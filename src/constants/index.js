@@ -13,6 +13,8 @@ import { ReactComponent as FirebaseIcon } from '../assets/icons/firebase.svg'
 import { ReactComponent as ReduxIcon } from '../assets/icons/redux.svg'
 import { ReactComponent as StripeIcon } from '../assets/icons/stripe.svg'
 import { ReactComponent as NextJSIcon } from '../assets/icons/nextjs.svg'
+import { ReactComponent as ShadCNIcon } from '../assets/icons/shadcn.svg'
+import { ReactComponent as PrismaIcon } from '../assets/icons/prisma.svg'
 
 import CofeedImage from '../assets/imgs/cofeed.jpeg'
 import EcommerceImage from '../assets/imgs/ecommerce.jpeg'
@@ -38,6 +40,8 @@ export const SKILLS = [
     { id: 11, name: 'Firebase', icon: FirebaseIcon },
     { id: 13, name: 'Stripe', icon: StripeIcon },
     { id: 14, name: 'NextJS', icon: NextJSIcon },
+    { id: 14, name: 'Prisma', icon: PrismaIcon },
+    { id: 14, name: 'ShadCN', icon: ShadCNIcon },
 ]
 
 export const EXPERIENCES = [
@@ -105,8 +109,11 @@ export const PROJECTS = [
         bgcolor: "#0B1320",
         tools: [
             { name: 'React', icon: ReactIcon },
-            { name: 'Typescript', icon: TypeScriptIcon },
             { name: 'NextJS', icon: NextJSIcon },
+            { name: 'Typescript', icon: TypeScriptIcon },
+            { name: 'ShadCN/UI', icon: ShadCNIcon },
+            { name: 'PrismaORM', icon: PrismaIcon },
+            { name: 'Stripe', icon: StripeIcon },
         ],
         demo: 'https://ecommerce-admin-five-gold.vercel.app/655500866b5675f63ce0f2a9',
         github: 'https://github.com/hanyy444/ecommerce-admin'
@@ -163,8 +170,11 @@ export const PROJECTS = [
         bgcolor: "#0B1320",
         tools: [
             { name: 'React', icon: ReactIcon },
+            { name: 'NextJS', icon: NextJSIcon },
             { name: 'Typescript', icon: TypeScriptIcon },
-            { name: 'Material-UI', icon: MaterialUIIcon },
+            { name: 'ShadCN/UI', icon: ShadCNIcon },
+            { name: 'PrismaORM', icon: PrismaIcon },
+            { name: 'Stripe', icon: StripeIcon },
         ],
         demo: 'https://ecommerce-store-omega-brown.vercel.app/',
         github: 'https://github.com/hanyy444/ecommerce-store'
