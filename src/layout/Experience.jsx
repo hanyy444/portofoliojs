@@ -134,7 +134,7 @@ export default function Experience() {
       component="section"
       // height="100vh"
       // padding="5rem"
-      marginTop={5}
+      marginY="5rem"
       sx={{
         scrollMarginTop: "9rem",
         padding: isPhone ? "3rem" : "0 5rem",
