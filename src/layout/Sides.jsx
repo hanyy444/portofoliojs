@@ -52,7 +52,7 @@ export default function Sides() {
         scrollPosition > 1700
           ? theme.palette.primary.contrastText
           : theme.palette.primary.main,
-      // transition: "all 5s",
+      transition: "background-color .5s ease",
     },
   };
 
@@ -89,11 +89,12 @@ export default function Sides() {
             onMouseOut={onMouseOut}
             sx={{
               transform: "rotate(90deg)",
-              transition: "all .1s ease",
+              transition: "all .5s ease",
               color:
                 scrollPosition > 1700
                   ? theme.palette.primary.contrastText
                   : theme.palette.primary.main,
+              // transition: "color .5s ease",
               letterSpacing: 1,
               ":hover": {
                 color: "secondary.main",

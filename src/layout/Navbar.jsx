@@ -60,6 +60,7 @@ export default function Navbar({
                 scrollPosition > 2600
                   ? theme.palette.primary.contrastText
                   : theme.palette.primary.light,
+              transition: "color .5s ease",
               "&:hover": {
                 background: "none",
                 color: theme.palette.secondary.main,
@@ -127,6 +128,7 @@ export default function Navbar({
                 scrollPosition > 2200
                   ? theme.palette.primary.contrastText
                   : theme.palette.primary.main,
+              transition: "fill .5s ease",
             }}
           />
           {/* </Typography> */}

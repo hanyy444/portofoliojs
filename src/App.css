@@ -68,7 +68,7 @@ html {
 /* Custom Scrollbar: For WebKit browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
   cursor: pointer;
-  width: 10px;
+  width: 5px;
   height: 5px;
 }
 

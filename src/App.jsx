@@ -1,11 +1,11 @@
 import "./App.css";
-import { lazy, useEffect, useState, Suspense } from "react";
+import { lazy, useEffect, useState } from "react";
 import Stack from "@mui/material/Stack";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import CssBaseline from "@mui/material/CssBaseline";
+// import CssBaseline from "@mui/material/CssBaseline";
 import Loader from "./components/Loader";
 // import Spinner from "./components/Spinner";
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
 
 import Navbar from "./layout/Navbar";
 import About from "./layout/About";
@@ -99,8 +99,6 @@ function App() {
                 <Contact />
                 {!isTablet ? <Sides /> : <Footer />}
               </Reveal>
-              {/* <Reveal> */}
-              {/* </Reveal> */}
             </Stack>
           )}
           {/* </Suspense> */}

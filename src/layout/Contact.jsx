@@ -62,8 +62,8 @@ const CustomTextField = ({ style, ...props }) => {
           fontSize: "2rem",
           // background: theme.palette.background.default,
           "&:-webkit-autofill": {
-            WebkitBoxShadow: `0 0 0 1000px ${theme.palette.background.default} inset`,
-            WebkitTextFillColor: theme.palette.primary.main,
+            WebkitBoxShadow: `0 0 0 1000px ${theme.palette.primary.main} inset`,
+            WebkitTextFillColor: "#333",
           },
         },
       }}

@@ -47,6 +47,8 @@ export default function Project({ project }) {
   return (
     <Card
       sx={{
+        maxHeight: "90%",
+        overflowY: "auto",
         width: "80%",
         maxWidth: 600,
         position: "absolute",
@@ -69,7 +71,7 @@ export default function Project({ project }) {
           alt={project.name}
           image={project.image}
           sx={{
-            // maxHeight: "50rem",
+            // maxHeight: "30rem",
             // height: "35rem",
             objectFit: "cover",
             // '&:hover': {
