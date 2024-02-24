@@ -1,10 +1,10 @@
 import "./App.css";
-import { lazy, useEffect, useState, Suspense } from "react";
+import { lazy, useEffect, useState } from "react";
 import Stack from "@mui/material/Stack";
 import useMediaQuery from "@mui/material/useMediaQuery";
 // import CssBaseline from "@mui/material/CssBaseline";
 import Loader from "./components/Loader";
-import Spinner from "./components/Spinner";
+// import Spinner from "./components/Spinner";
 import { Box, useTheme } from "@mui/material";
 
 import Navbar from "./layout/Navbar";
@@ -85,30 +85,30 @@ function App() {
             showExperience={showExperience}
             showResume={showResume}
           />
-          <Suspense fallback={<Spinner />}>
-            {openResume && showResume ? (
-              <Resume />
-            ) : (
-              <Stack
-                component="main"
-                sx={{
-                  paddingTop: "5rem",
-                  gap: "10rem",
-                }}
-              >
-                <Reveal>
-                  <About />
-                </Reveal>
-                {showExperience && <Experience />}
-                <Skills />
-                <Projects />
-                <Reveal>
-                  <Contact />
-                  {!isTablet ? <Sides /> : <Footer />}
-                </Reveal>
-              </Stack>
-            )}
-          </Suspense>
+          {/* <Suspense fallback={<Spinner />}> */}
+          {openResume && showResume ? (
+            <Resume />
+          ) : (
+            <Stack
+              component="main"
+              sx={{
+                paddingTop: "5rem",
+                gap: "10rem",
+              }}
+            >
+              <Reveal>
+                <About />
+              </Reveal>
+              {showExperience && <Experience />}
+              <Skills />
+              <Projects />
+              <Reveal>
+                <Contact />
+                {!isTablet ? <Sides /> : <Footer />}
+              </Reveal>
+            </Stack>
+          )}
+          {/* </Suspense> */}
         </>
       )}
     </Box>

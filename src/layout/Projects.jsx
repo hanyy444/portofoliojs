@@ -1,4 +1,4 @@
-import { lazy, useState } from "react";
+import { useState } from "react";
 import {
   Box,
   Button,
@@ -11,9 +11,9 @@ import hexToRgba from "../utils/hexToRgba";
 
 import { PROJECTS } from "../constants";
 
-const MuiModal = lazy(() => import("../components/Modal"));
-const Project = lazy(() => import("../components/Project"));
-const Reveal = lazy(() => import("../components/Reveal"));
+import MuiModal from "../components/Modal";
+import Project from "../components/Project";
+import Reveal from "../components/Reveal";
 
 export default function Projects() {
   const theme = useTheme();

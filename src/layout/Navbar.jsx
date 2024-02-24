@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { lazy } from "react";
+// import { lazy } from "react";
 
 import {
   AppBar,
@@ -10,7 +10,7 @@ import {
   useTheme,
 } from "@mui/material";
 
-const SideNavbar = lazy(() => import("./SideNavbar"));
+import SideNavbar from "./SideNavbar";
 
 import useScroll from "../utils/useScroll";
 import { Person } from "@mui/icons-material";
