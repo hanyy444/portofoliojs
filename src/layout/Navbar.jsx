@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+import { lazy } from "react";
+
 import {
   AppBar,
   Toolbar,
@@ -7,10 +9,10 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import SideNavbar from "./SideNavbar";
+
+const SideNavbar = lazy(() => import("./SideNavbar"));
 
 import useScroll from "../utils/useScroll";
-import hexToRgbA from "../utils/hexToRgba";
 import { Person } from "@mui/icons-material";
 
 const NAV_LINKS = [

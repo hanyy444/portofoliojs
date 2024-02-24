@@ -16,32 +16,32 @@ import { ReactComponent as NextJSIcon } from '../assets/icons/nextjs.svg'
 import { ReactComponent as ShadCNIcon } from '../assets/icons/shadcn.svg'
 import { ReactComponent as PrismaIcon } from '../assets/icons/prisma.svg'
 
-import CofeedImage from '../assets/imgs/cofeed.jpeg'
-import EcommerceImage from '../assets/imgs/ecommerce.jpeg'
-import MonsterImage from '../assets/imgs/monster.png'
-import BostaImage from '../assets/imgs/bosta.jpeg'
-import DasboardImage from '../assets/imgs/dashboard.jpeg'
-import EcommerceAdminDashboardImage from '../assets/imgs/e-commerce-admin.jpeg'
-import EcommerceStoreImage from '../assets/imgs/e-commerce-store.jpeg'
+import CofeedImage from '../assets/imgs/webp/cofeed.webp'
+import EcommerceImage from '../assets/imgs/webp/ecommerce.webp'
+import MonsterImage from '../assets/imgs/webp/monster.avif'
+import BostaImage from '../assets/imgs/webp/bosta.webp'
+import DasboardImage from '../assets/imgs/webp/dashboard.webp'
+import EcommerceAdminDashboardImage from '../assets/imgs/webp/e-commerce-admin.webp'
+import EcommerceStoreImage from '../assets/imgs/webp/e-commerce-store.webp'
 
 export const SKILLS = [
     { id: 0, name: 'React', icon: ReactIcon },
     { id: 1, name: 'HTML', icon: HTMLIcon },
     { id: 2, name: 'CSS', icon: CSSIcon },
     { id: 3, name: 'Sass', icon: SassIcon },
-    { id: 12, name: 'Redux', icon: ReduxIcon },
-    { id: 4, name: 'MaterialUI', icon: MaterialUIIcon },
-    { id: 5, name: 'JavaScript', icon: JavaScriptIcon },
-    { id: 6, name: 'TypeScript', icon: TypeScriptIcon },
-    { id: 7, name: 'NodeJS', icon: NodeJSIcon },
-    { id: 8, name: 'MongoDB', icon: MongoDBIcon },
-    { id: 9, name: 'Python', icon: PythonIcon },
-    { id: 10, name: 'Tailwind', icon: TailwindIcon },
-    { id: 11, name: 'Firebase', icon: FirebaseIcon },
+    { id: 4, name: 'Redux', icon: ReduxIcon },
+    { id: 5, name: 'MaterialUI', icon: MaterialUIIcon },
+    { id: 6, name: 'JavaScript', icon: JavaScriptIcon },
+    { id: 7, name: 'TypeScript', icon: TypeScriptIcon },
+    { id: 8, name: 'NodeJS', icon: NodeJSIcon },
+    { id: 9, name: 'MongoDB', icon: MongoDBIcon },
+    { id: 10, name: 'Python', icon: PythonIcon },
+    { id: 11, name: 'Tailwind', icon: TailwindIcon },
+    { id: 12, name: 'Firebase', icon: FirebaseIcon },
     { id: 13, name: 'Stripe', icon: StripeIcon },
     { id: 14, name: 'NextJS', icon: NextJSIcon },
-    { id: 14, name: 'Prisma', icon: PrismaIcon },
-    { id: 14, name: 'ShadCN', icon: ShadCNIcon },
+    { id: 15, name: 'Prisma', icon: PrismaIcon },
+    { id: 16, name: 'ShadCN', icon: ShadCNIcon },
 ]
 
 export const EXPERIENCES = [

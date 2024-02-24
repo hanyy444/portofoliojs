@@ -7,7 +7,7 @@ import {
   useMediaQuery,
   // Avatar,
 } from "@mui/material";
-import ProfilePhoto from "../assets/main-photo.jpg";
+import ProfilePhoto from "../assets/main-photo-compressed.avif";
 import CallIcon from "@mui/icons-material/Call";
 // import hexToRgbA from "../utils/hexToRgba";
 
@@ -28,6 +28,7 @@ export default function About() {
       <img
         src={ProfilePhoto}
         alt="profile-photo"
+        loading="lazy"
         style={{
           height: isTablet ? "35rem" : "45rem",
           width: isTablet ? "35rem" : "45rem",
@@ -47,7 +48,7 @@ export default function About() {
     alignItems: isTablet ? "start" : "center",
     justifyContent: isTablet ? "start" : "center",
     gap: "5rem",
-    padding: isTablet ? "64px 3rem 0 3rem" : "0 20rem",
+    padding: isTablet ? "6.4rem 6rem 0 6rem" : "0 20rem",
     mb: "5rem",
     scrollMarginTop: "calc(5rem + 64px)", // Header + Padding
   };

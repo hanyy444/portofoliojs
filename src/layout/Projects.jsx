@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { lazy, useState } from "react";
 import {
   Box,
   Button,
@@ -11,9 +11,9 @@ import hexToRgba from "../utils/hexToRgba";
 
 import { PROJECTS } from "../constants";
 
-import MuiModal from "../components/Modal";
-import Project from "../components/Project";
-import Reveal from "../components/Reveal";
+const MuiModal = lazy(() => import("../components/Modal"));
+const Project = lazy(() => import("../components/Project"));
+const Reveal = lazy(() => import("../components/Reveal"));
 
 export default function Projects() {
   const theme = useTheme();
@@ -52,20 +52,8 @@ export default function Projects() {
 
   const renderedProjects = PROJECTS.map(
     (project, index) => (
-      <Reveal
-        key={`${project.name}-${index}`}
-        style={
-          {
-            // alignSelf: "center",
-            // display: "flex",
-            // alignItems: "center",
-            // justifyContent: "center",
-            // width: "100%",
-          }
-        }
-      >
+      <Reveal key={`${project.name}-${index}`}>
         <Box
-          // bgcolor={hexToRgba(theme.palette.primary.main, 0.5)}
           display="flex"
           alignItems="center"
           justifyContent="center"
@@ -78,10 +66,6 @@ export default function Projects() {
             cursor: "pointer",
             position: "relative", // To make the overlay relative to this container
             "&:hover": hoverStyle,
-            // border: `.1px solid ${hexToRgba(
-            //   theme.palette.secondary.main,
-            //   1
-            // )}`,
           }}
           onClick={() => {
             setOpen(true);
@@ -109,13 +93,11 @@ export default function Projects() {
           <img
             src={project.image}
             alt={project.name}
+            loading="lazy"
             style={{
               border: "none",
               width: "100%",
-              // aspectRatio: "16/9",
-              // height: 200,
               borderRadius: ".5rem",
-              // filter: "drop-shadow(0 0 4px #555)",
               boxShadow: `rgba(17, 17, 26, 0.3) 0px 8px 24px,
                               rgba(17, 17, 26, 0.3) 0px 16px 56px,
                               rgba(17, 17, 26, 0.3) 0px 24px 80px`,
@@ -130,8 +112,6 @@ export default function Projects() {
     <Stack
       id="projects"
       component="section"
-      // padding="5rem"
-      // marginY="15rem"
       sx={{
         display: "flex",
         alignItems: "center",
@@ -152,12 +132,7 @@ export default function Projects() {
       </MuiModal>
       <Box
         sx={{
-          // overflowY: "hidden",
-          // overflowX: "auto",
-          // py: 5,
           display: "flex",
-          // maxWidth: 1500,
-          // scrollSnapType: "x",
         }}
       >
         <Box
